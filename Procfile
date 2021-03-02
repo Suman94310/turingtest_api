@@ -1,1 +1,1 @@
-web: gunicorn django_project.wsgi
+web: gunicorn turing_test_bes.wsgi
