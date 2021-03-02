@@ -13,6 +13,10 @@ import io
 # import cStringIO
 import re
 
+import os
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 class Digits(APIView):
     """
@@ -49,7 +53,8 @@ class Digits(APIView):
             x,y,w,h = cv.boundingRect(contour)
             array.append({'x':x, 'y':y, 'w':w, 'h':h})
 
-        model = load_model('final_model.h5')
+
+        model = load_model(os.path.join(BASE_DIR, 'final_model.h5'))
         # print(hierarchy, hierarchy[0][1][3])
         for j,i  in enumerate(array) :
             if hierarchy[0][j][3] == -1:
