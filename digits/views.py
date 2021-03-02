@@ -53,7 +53,7 @@ class Digits(APIView):
             x,y,w,h = cv.boundingRect(contour)
             array.append({'x':x, 'y':y, 'w':w, 'h':h})
 
-        modelPath = BASE_DIR+'/final_model.h5'
+        modelPath = '/app/digits/final_model.h5'
 
         model = load_model(modelPath)
         # print(hierarchy, hierarchy[0][1][3])
