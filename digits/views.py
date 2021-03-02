@@ -53,8 +53,9 @@ class Digits(APIView):
             x,y,w,h = cv.boundingRect(contour)
             array.append({'x':x, 'y':y, 'w':w, 'h':h})
 
+        modelPath = os.path.join(BASE_DIR, 'final_model.h5')
 
-        model = load_model(os.path.join(BASE_DIR, 'final_model.h5'))
+        model = load_model(modelPath)
         # print(hierarchy, hierarchy[0][1][3])
         for j,i  in enumerate(array) :
             if hierarchy[0][j][3] == -1:
