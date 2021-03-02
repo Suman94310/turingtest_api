@@ -1,1 +1,1 @@
-web: gunicorn turing_test_bes.wsgi
+web: gunicorn turing_test_be.wsgi
