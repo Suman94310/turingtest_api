@@ -26,7 +26,7 @@ SECRET_KEY = 'q*z3meb*2umox@0$8%9j67-_zfn7!*6c(^!2-=65n(tbqo!iwe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mlturingtest.herokuapp.com']
 
 
 # Application definition
