@@ -27,11 +27,19 @@ SECRET_KEY = 'q*z3meb*2umox@0$8%9j67-_zfn7!*6c(^!2-=65n(tbqo!iwe'
 DEBUG = True
 
 ALLOWED_HOSTS = ['mlturingtest.herokuapp.com']
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+       'https://dreamy-pare-d28444.netlify.app/',
+)
+
+
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
