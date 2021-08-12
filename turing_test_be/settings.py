@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['mlturingtest.herokuapp.com']
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
-       'https://dreamy-pare-d28444.netlify.app/',
+       'https://turingtest.netlify.app/',
 )
 
 
